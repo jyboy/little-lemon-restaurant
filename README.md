@@ -4,7 +4,7 @@ A modern, responsive web application for booking tables at the Little Lemon rest
 
 ## Demo
 
-Check out the live demo: [https://littlelemon.junyang.wang](https://littlelemon.junyang.wang)
+Check out the live demo: [https://littlelemon-rest.netlify.app/](https://littlelemon-rest.netlify.app/)
 
 ## Features
 

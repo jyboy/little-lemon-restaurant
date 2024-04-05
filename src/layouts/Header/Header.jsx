@@ -1,3 +1,4 @@
+import '@uiw/github-corners';
 import { NavLink } from 'react-router-dom';
 import logoImage from '../../assets/logo.svg';
 import pageList from '../../utils/pageList';
@@ -24,6 +25,11 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+      <github-corners
+        position="absolute"
+        target="__blank"
+        href="https://github.com/jyboy/little-lemon-restaurant"
+      />
     </header>
   );
 };

@@ -13,9 +13,10 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: {
-    react: { version: '18.2' }, "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx"]
+    react: { version: '18.2' },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx']
       }
     }
   },
@@ -24,17 +25,23 @@ module.exports = {
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
+      { allowConstantExport: true }
     ],
     'react/prop-types': 'off',
     'no-unused-vars': [
       'error',
       {
-        'vars': 'all',
-        'args': 'after-used',
-        'ignoreRestSiblings': true,
-        'argsIgnorePattern': '^_'
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+        argsIgnorePattern: '^_'
       }
     ],
-  },
-}
+    'import/no-unresolved': [
+      'error',
+      {
+        ignore: ['^@uiw/github-corners$']
+      }
+    ]
+  }
+};

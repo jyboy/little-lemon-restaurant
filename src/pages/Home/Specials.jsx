@@ -29,7 +29,7 @@ const specials = [
 
 const Specials = () => {
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center pt-12">
       <div className="w-256">
         <div className="flex h-32 items-center">
           <h2 className="font-serif text-4.5xl text-olive">

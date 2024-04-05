@@ -6,8 +6,12 @@ const DishCard = ({ name, description, image, price }) => {
   const handleClick = () => {};
 
   return (
-    <div className="h-116 w-72 rounded-2xl bg-olive-light">
-      <img src={image} alt={name} className="h-48 rounded-2xl" />
+    <div className="h-116 w-72 overflow-hidden rounded-2xl bg-olive-light">
+      <img
+        src={image}
+        alt={name}
+        className="h-48 rounded-2xl hover:scale-105"
+      />
       <div className="flex h-20 items-center justify-between px-4">
         <h3 className="text-xl text-olive">{name}</h3>
         <span className="text-lg font-bold text-orange">{price}</span>

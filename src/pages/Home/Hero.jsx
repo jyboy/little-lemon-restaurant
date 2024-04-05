@@ -27,11 +27,13 @@ const Hero = () => {
             />
           </div>
         </div>
-        <img
-          src={restaurantChefImage}
-          alt="Little Lemon chef and food"
-          className="h-80 rounded-2xl"
-        />
+        <div className="relative w-90 flex-none">
+          <img
+            src={restaurantChefImage}
+            alt="Little Lemon chef and food"
+            className="relative top-16 rounded-2xl object-cover"
+          />
+        </div>
       </div>
     </section>
   );

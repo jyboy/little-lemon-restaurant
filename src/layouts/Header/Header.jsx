@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logoImage from '../../assets/logo.svg';
 import pageList from '../../utils/pageList';
 
@@ -10,10 +10,15 @@ const Header = () => {
         <nav>
           <ul className="flex justify-between gap-x-8">
             {pageList.map(({ id, name, path }) => (
-              <li key={id}>
-                <Link to={path} className="text-xl hover:text-yellow">
+              <li key={id} className="text-xl">
+                <NavLink
+                  to={path}
+                  className={({ isActive }) =>
+                    isActive ? 'text-yellow' : '"hover:text-yellow"'
+                  }
+                >
                   {name}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>

@@ -35,9 +35,9 @@ const TableReservation = () => {
   });
 
   return (
-    <div className="flex flex-col items-center pt-12">
+    <div className="flex flex-col items-center pb-20 pt-12">
       <h1 className="font-serif text-4.5xl text-olive">Table Reservation</h1>
-      <form onSubmit={formik.handleSubmit} className="w-96">
+      <form onSubmit={formik.handleSubmit} className="mt-4 w-96">
         <div className="h-24">
           <label
             htmlFor="date"

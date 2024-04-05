@@ -12,7 +12,13 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
+  settings: {
+    react: { version: '18.2' }, "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
   plugins: ['react-refresh'],
   rules: {
     'react/jsx-no-target-blank': 'off',
@@ -21,7 +27,6 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/prop-types': 'off',
-    'import/no-unresolved': 'off',
     'no-unused-vars': [
       'error',
       {

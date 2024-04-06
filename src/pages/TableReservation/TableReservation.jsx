@@ -4,17 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { object, string, number, date } from 'yup';
 import Button from '../../components/Button/Button';
 import useSubmit from '../../hooks/useSubmit';
+import getCurrentDate from '../../utils/getCurrentDate';
 
 const TableReservation = () => {
   const navigate = useNavigate();
   const { isLoading, response, submit } = useSubmit();
 
   const schema = object({
-    date: date()
-      .required()
-      .min(
-        new Date(new Date().setTime(new Date().getTime() - 24 * 60 * 60 * 1000))
-      ),
+    date: date().required(),
     time: string()
       .required()
       .matches(/^[12]\d:00$/),
@@ -24,7 +21,7 @@ const TableReservation = () => {
 
   const formik = useFormik({
     initialValues: {
-      date: new Date().toISOString().split('T')[0],
+      date: getCurrentDate(),
       time: '17:00',
       guests: 1,
       occasion: 'Birthday'

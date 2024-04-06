@@ -1,10 +1,8 @@
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from './Button';
+import Button from '../Button/Button';
 
 const DishCard = ({ name, description, image, price }) => {
-  const handleClick = () => {};
-
   return (
     <div className="h-116 w-72 overflow-hidden rounded-2xl bg-olive-light">
       <img
@@ -22,8 +20,8 @@ const DishCard = ({ name, description, image, price }) => {
       <div className="mt-3 px-4">
         <Button
           text="Order a delivery"
-          icon={<FontAwesomeIcon icon={faMotorcycle} />}
-          onClick={handleClick()}
+          icon={<FontAwesomeIcon icon={faMotorcycle} alt="order" />}
+          onClick={() => {}}
         />
       </div>
     </div>

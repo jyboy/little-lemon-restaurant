@@ -1,4 +1,4 @@
-import TestimonialCard from '../../components/TestimonialCard';
+import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 
 const testimonials = [
   {
@@ -6,7 +6,7 @@ const testimonials = [
     author: 'John Doe',
     avatar: new URL('../../assets/avatar-1.jpeg', import.meta.url).href,
     rating: 5,
-    text: 'The modern twist on traditional recipes is delightful!  Warm, family atmosphere makes the experience even better.'
+    text: 'The modern twist on traditional recipes is delightful! Warm, family atmosphere makes the experience even better.'
   },
   {
     id: 2,
@@ -39,14 +39,8 @@ const Testimonials = () => {
           <h2 className="font-serif text-4.5xl text-white">What people say</h2>
         </div>
         <div className="flex justify-between">
-          {testimonials.map(({ id, author, avatar, rating, text }) => (
-            <TestimonialCard
-              key={id}
-              author={author}
-              avatar={avatar}
-              rating={rating}
-              text={text}
-            />
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}
         </div>
       </div>

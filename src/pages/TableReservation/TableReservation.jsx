@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { object, string, number, date } from 'yup';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
 import useSubmit from '../../hooks/useSubmit';
 
 const TableReservation = () => {
@@ -128,8 +128,8 @@ const TableReservation = () => {
         </div>
         <div className="mt-4 flex justify-center">
           <Button
+            text="Reserve now"
             type="submit"
-            text="Book a table"
             disabled={!formik.isValid || isLoading}
           />
         </div>

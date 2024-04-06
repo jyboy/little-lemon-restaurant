@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import restaurantChefImage from '../../assets/restaurant-chef.jpg';
-import Button from '../../components/Button';
+import Button from '../../components/Button/Button';
 
 const Hero = () => {
   const navigate = useNavigate();

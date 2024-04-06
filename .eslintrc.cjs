@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, jest: true },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -8,6 +8,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:import/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:testing-library/react',
     'eslint-config-prettier'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -20,7 +21,7 @@ module.exports = {
       }
     }
   },
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh', 'testing-library'],
   rules: {
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
@@ -37,11 +38,15 @@ module.exports = {
         argsIgnorePattern: '^_'
       }
     ],
+    'import/named': 'off',
     'import/no-unresolved': [
       'error',
       {
         ignore: ['^@uiw/github-corners$']
       }
     ]
+  },
+  globals: {
+    vi: true
   }
 };

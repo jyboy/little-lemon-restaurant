@@ -1,9 +1,9 @@
-import DishCard from '../../components/DishCard';
+import DishCard from '../../components/DishCard/DishCard';
 
 const specials = [
   {
     id: 1,
-    dish: 'Greek Salad',
+    name: 'Greek Salad',
     price: '$12.99',
     description:
       'The famous Greek salad of crisp lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
@@ -11,7 +11,7 @@ const specials = [
   },
   {
     id: 2,
-    dish: 'Bruschetta',
+    name: 'Bruschetta',
     price: '$5.99',
     description:
       'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.',
@@ -19,7 +19,7 @@ const specials = [
   },
   {
     id: 3,
-    dish: 'Lemon Dessert',
+    name: 'Lemon Dessert',
     price: '$4.99',
     description:
       "This comes straight from grandma's recipe book; every last ingredient has been sourced and is as authentic as can be imagined.",
@@ -37,14 +37,8 @@ const Specials = () => {
           </h2>
         </div>
         <div className="flex justify-between">
-          {specials.map(({ id, dish, price, description, image }) => (
-            <DishCard
-              key={id}
-              name={dish}
-              price={price}
-              description={description}
-              image={image}
-            />
+          {specials.map((special) => (
+            <DishCard key={special.id} {...special} />
           ))}
         </div>
       </div>

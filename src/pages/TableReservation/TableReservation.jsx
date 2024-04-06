@@ -1,10 +1,13 @@
 import { useFormik } from 'formik';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { object, string, number, date } from 'yup';
 import Button from '../../components/Button';
+import useSubmit from '../../hooks/useSubmit';
 
 const TableReservation = () => {
   const navigate = useNavigate();
+  const { isLoading, response, submit } = useSubmit();
 
   const schema = object({
     date: date()
@@ -28,11 +31,24 @@ const TableReservation = () => {
     },
     onSubmit: (values) => {
       console.table(values);
-      navigate('/reservation-success');
-      formik.resetForm();
+      submit(location.href, values);
     },
     validationSchema: schema
   });
+
+  useEffect(() => {
+    if (response) {
+      if (response.type === 'success') {
+        navigate('/reservation-success', {
+          state: response.data
+        });
+        formik.resetForm();
+      } else {
+        console.debug('error:', response.message);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [response]);
 
   return (
     <div className="flex flex-col items-center pb-20 pt-12">
@@ -114,7 +130,7 @@ const TableReservation = () => {
           <Button
             type="submit"
             text="Book a table"
-            disabled={!formik.isValid || formik.isSubmitting}
+            disabled={!formik.isValid || isLoading}
           />
         </div>
       </form>

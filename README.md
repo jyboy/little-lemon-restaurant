@@ -1,5 +1,7 @@
 # Little Lemon Restaurant
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34939cfa-d864-4db0-b0cd-43944fa61457/deploy-status)](https://app.netlify.com/sites/littlelemon-rest/deploys)
+
 A modern, responsive web application for booking tables at the Little Lemon restaurant, built with React. This project is the capstone project for the Meta Front-End Developer Professional Certificate Program.
 
 ## Demo

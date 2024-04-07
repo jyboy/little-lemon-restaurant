@@ -1,17 +1,17 @@
 {
   "name": "little-lemon-restaurant",
   "description": "The capstone project of Meta Front-End Developer",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"{src,cypress}/**/*.{js,jsx,css}\"",
     "test:unit": "vitest run",
     "test:ui": "cypress run",
-    "preview": "vite preview",
     "cypress:open": "cypress open"
   },
   "dependencies": {

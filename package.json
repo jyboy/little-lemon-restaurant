@@ -8,10 +8,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
-    "test:unit": "vitest",
+    "format": "prettier --write \"{src,cypress}/**/*.{js,jsx,css}\"",
+    "test:unit": "vitest run",
+    "test:ui": "cypress run",
     "preview": "vite preview",
-    "prepare": "husky"
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -33,8 +34,10 @@
     "@types/react-dom": "^18.2.24",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
+    "cypress": "^13.7.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.1",

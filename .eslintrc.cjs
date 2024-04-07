@@ -7,8 +7,9 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:import/recommended',
-    'plugin:jsx-a11y/recommended',
     'plugin:testing-library/react',
+    'plugin:cypress/recommended',
+    'plugin:jsx-a11y/recommended',
     'eslint-config-prettier'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -44,7 +45,8 @@ module.exports = {
       {
         ignore: ['^@uiw/github-corners$']
       }
-    ]
+    ],
+    'cypress/unsafe-to-chain-command': 'off'
   },
   globals: {
     vi: true

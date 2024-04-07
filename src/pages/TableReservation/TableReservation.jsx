@@ -66,7 +66,9 @@ const TableReservation = () => {
             onChange={formik.handleChange}
             className="h-10 w-full rounded border border-olive-light pl-3 text-olive"
           />
-          <p className="leading-relaxed text-orange">{formik.errors.date}</p>
+          <p className="leading-relaxed text-orange" data-testid="date-error">
+            {formik.errors.date}
+          </p>
         </div>
         <div className="h-24">
           <label htmlFor="time" className="text-xl font-bold text-olive">
@@ -86,7 +88,9 @@ const TableReservation = () => {
             <option>21:00</option>
             <option>22:00</option>
           </select>
-          <p className="leading-relaxed text-orange">{formik.errors.time}</p>
+          <p className="leading-relaxed text-orange" data-testid="time-error">
+            {formik.errors.time}
+          </p>
         </div>
         <div className="h-24">
           <label htmlFor="guests" className="text-xl font-bold text-olive">
@@ -102,7 +106,9 @@ const TableReservation = () => {
             onChange={formik.handleChange}
             className="h-10 w-full rounded border border-olive-light pl-3 text-olive"
           />
-          <p className="leading-relaxed text-orange">{formik.errors.guests}</p>
+          <p className="leading-relaxed text-orange" data-testid="guests-error">
+            {formik.errors.guests}
+          </p>
         </div>
         <div className="h-24">
           <label htmlFor="occasion" className="text-xl font-bold text-olive">
@@ -119,12 +125,16 @@ const TableReservation = () => {
             <option>Anniversary</option>
             <option>Other</option>
           </select>
-          <p className="leading-relaxed text-orange">
+          <p
+            className="leading-relaxed text-orange"
+            data-testid="occasion-error"
+          >
             {formik.errors.occasion}
           </p>
         </div>
         <div className="mt-4 flex justify-center">
           <Button
+            id="submit"
             text="Reserve now"
             type="submit"
             disabled={!formik.isValid || isLoading}

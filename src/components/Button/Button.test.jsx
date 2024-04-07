@@ -13,10 +13,7 @@ describe('Button component', () => {
   test('renders an icon Button with correct classes', () => {
     const text = 'Order a delivery';
     render(
-      <Button
-        text={text}
-        icon={<FontAwesomeIcon icon={faMotorcycle} alt="order" />}
-      />
+      <Button text={text} icon={<FontAwesomeIcon icon={faMotorcycle} />} />
     );
     expect(screen.getByRole('button', { name: text })).toHaveClass(
       'border-none'

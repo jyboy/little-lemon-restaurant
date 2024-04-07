@@ -20,7 +20,7 @@ const DishCard = ({ name, description, image, price }) => {
       <div className="mt-3 px-4">
         <Button
           text="Order a delivery"
-          icon={<FontAwesomeIcon icon={faMotorcycle} alt="order" />}
+          icon={<FontAwesomeIcon icon={faMotorcycle} />}
           onClick={() => {}}
         />
       </div>

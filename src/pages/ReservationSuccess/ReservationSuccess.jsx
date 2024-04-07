@@ -9,7 +9,10 @@ const ReservationSuccess = () => {
     <div>
       <div className="flex flex-col items-center pt-28 text-olive">
         <FontAwesomeIcon icon={faCircleCheck} size="4x" />
-        <h1 className="mt-8 font-serif text-4.5xl">
+        <h1
+          className="mt-8 font-serif text-4.5xl"
+          data-testid="success-message"
+        >
           Your reservation for {location.state.date} at {location.state.time}{' '}
           has been confirmed.
         </h1>

@@ -24,6 +24,7 @@ const Hero = () => {
               onClick={() => {
                 navigate('/table-reservation');
               }}
+              data-testid="reserve"
             />
           </div>
         </div>
@@ -32,6 +33,7 @@ const Hero = () => {
             src={restaurantChefImage}
             alt="Little Lemon chef and food"
             className="relative top-16 rounded-2xl object-cover"
+            data-testid="hero-illustration"
           />
         </div>
       </div>

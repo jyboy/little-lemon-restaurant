@@ -1,8 +1,11 @@
 # Little Lemon Restaurant
 
+[![Build Status](https://img.shields.io/github/actions/workflow/status/jyboy/little-lemon-restaurant/main.yml?branch=main)](https://github.com/jyboy/little-lemon-restaurant/actions/workflows/main.yml)
+[![Cypress Status](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/nfahnr/main&style=flat&logo=cypress)](https://cloud.cypress.io/projects/nfahnr/runs)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/34939cfa-d864-4db0-b0cd-43944fa61457/deploy-status)](https://app.netlify.com/sites/littlelemon-rest/deploys)
+[![Project Background](https://img.shields.io/badge/Capstone_Project_-Meta_Frontend_Developer-2a73cc)](https://coursera.org/share/7fac44fbba3ed1449f894efc63c75116)
 
-A modern, responsive web application for booking tables at the Little Lemon restaurant, built with React. This project is the capstone project for the Meta Front-End Developer Professional Certificate Program.
+A modern web application for table reservation at the Little Lemon restaurant, built with React and Tailwind CSS. This project is the capstone project for the Meta Front-End Developer Professional Certification Program.
 
 ## Demo
 

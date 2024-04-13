@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"{src,cypress}/**/*.{js,jsx,css}\"",
-    "test:unit": "vitest run",
+    "test": "vitest run",
     "test:ui": "cypress run",
     "cypress:open": "cypress open"
   },
@@ -27,6 +27,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",

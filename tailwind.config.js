@@ -3,7 +3,7 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     fontFamily: {
-      sans: ['Karla', 'Helvetica', 'Arial', 'sans-serif'],
+      sans: ['Karla', 'Helvetica Neue', 'Arial', 'sans-serif'],
       serif: ['Markazi Text', 'Georgia', 'Times New Roman', 'serif']
     },
     colors: {

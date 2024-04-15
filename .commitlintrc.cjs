@@ -1,4 +1,4 @@
-// Align with gitmoji-vscode: https://github.com/seatonjiang/gitmoji-vscode/blob/main/src/gitmoji.ts
+// Refer to `gitmoji-vscode`: https://github.com/seatonjiang/gitmoji-vscode/blob/main/src/gitmoji.ts
 const gitmojis = [
   {
     emoji: '🎨',

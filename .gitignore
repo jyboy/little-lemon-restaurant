@@ -1,17 +1,16 @@
-# Dependency directory
+# Dependencies
 node_modules
-
-# Logs and cache
-logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
-.eslintcache
 
 # Build and test
 build
 dist
 coverage
+
+# Log files
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
 
 # Misc
 *.local

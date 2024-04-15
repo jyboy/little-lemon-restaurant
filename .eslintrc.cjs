@@ -10,7 +10,7 @@ module.exports = {
     'plugin:testing-library/react',
     'plugin:cypress/recommended',
     'plugin:jsx-a11y/recommended',
-    'eslint-config-prettier'
+    'prettier'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },

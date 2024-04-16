@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { object, string, number, date } from 'yup';
 import Button from '../../components/Button/Button';
 import useSubmit from '../../hooks/useSubmit';
-import getCurrentDate from '../../utils/getCurrentDate';
+import getToday from '../../utils/getToday';
 
 const TableReservation = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const TableReservation = () => {
 
   const formik = useFormik({
     initialValues: {
-      date: getCurrentDate(),
+      date: getToday(),
       time: '17:00',
       guests: 1,
       occasion: 'Birthday'

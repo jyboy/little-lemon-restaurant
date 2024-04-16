@@ -3,8 +3,8 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     fontFamily: {
-      sans: ['Karla', 'Helvetica Neue', 'Arial', 'sans-serif'],
-      serif: ['Markazi Text', 'Georgia', 'Times New Roman', 'serif']
+      sans: ['Karla', 'Helvetica Neue', 'sans-serif'],
+      serif: ['Markazi Text', 'ui-serif', 'serif']
     },
     colors: {
       white: '#fff',

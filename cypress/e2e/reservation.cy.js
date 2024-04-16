@@ -1,4 +1,4 @@
-import getCurrentDate from '../../src/utils/getCurrentDate';
+import getToday from '../../src/utils/getToday';
 
 describe('The Table Reservation page', () => {
   it('enters valid information and clicks submit', () => {
@@ -14,7 +14,7 @@ describe('The Table Reservation page', () => {
     cy.url().should('include', '/reservation-success');
     cy.get('[data-testid="success-message"]').should(
       'include.text',
-      getCurrentDate() + ' at 18:00'
+      getToday() + ' at 18:00'
     );
   });
 

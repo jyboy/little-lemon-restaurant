@@ -1,3 +1,4 @@
+// TODO: JSDoc
 const toStars = (rating) => {
   const fullStars = Math.floor(rating);
   const halfStar = rating % 1 !== 0 ? 0.5 : 0;

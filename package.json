@@ -12,7 +12,6 @@
     "format": "prettier --write \"{src,cypress}/**/*.{js,jsx,css}\"",
     "test": "vitest run",
     "test:ui": "cypress run",
-    "cypress:open": "cypress open",
     "prepare": "husky"
   },
   "dependencies": {

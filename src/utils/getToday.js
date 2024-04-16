@@ -1,4 +1,5 @@
-const getCurrentDate = () => {
+// TODO: JSDoc
+const getToday = () => {
   const date = new Date();
   const year = date.getFullYear();
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -6,4 +7,4 @@ const getCurrentDate = () => {
   return `${year}-${month}-${day}`;
 };
 
-export default getCurrentDate;
+export default getToday;

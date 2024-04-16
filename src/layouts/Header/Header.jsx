@@ -33,8 +33,10 @@ const Header = () => {
       </div>
       <github-corners
         position="absolute"
-        target="__blank"
+        width={64}
+        height={64}
         href="https://github.com/jyboy/little-lemon-restaurant"
+        target="_blank"
       />
     </header>
   );

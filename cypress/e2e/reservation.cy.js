@@ -1,9 +1,11 @@
 import getToday from '../../src/utils/getToday';
 
 describe('The Table Reservation page', () => {
-  it('enters valid information and clicks submit', () => {
+  beforeEach(() => {
     cy.visit('/table-reservation');
+  });
 
+  it('enters valid information and clicks submit', () => {
     cy.get('#time').select('18:00');
     cy.get('#guests').clear().type('2');
     cy.get('#time').should('have.value', '18:00');
@@ -19,8 +21,6 @@ describe('The Table Reservation page', () => {
   });
 
   it('enters invalid information and shows an error', () => {
-    cy.visit('/table-reservation');
-
     cy.get('#guests').clear();
     cy.get('[data-testid="guests-error"]').should(
       'have.text',

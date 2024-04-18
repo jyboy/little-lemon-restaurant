@@ -7,7 +7,7 @@ const ReservationSuccess = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center pt-28 text-olive">
+      <div className="flex flex-col items-center pt-24 text-olive">
         <FontAwesomeIcon icon={faCircleCheck} size="4x" />
         <h1
           className="mt-8 font-serif text-4.5xl"

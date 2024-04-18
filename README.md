@@ -9,7 +9,7 @@ A modern web application for table reservation at the Little Lemon restaurant, b
 
 ## Demo
 
-Check out the live demo: [https://littlelemon-rest.netlify.app/](https://littlelemon-rest.netlify.app/)
+Check out the live demo: [littlelemon-rest.netlify.app](https://littlelemon-rest.netlify.app)
 
 ## Features
 

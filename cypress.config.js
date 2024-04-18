@@ -3,7 +3,7 @@ import { defineConfig } from 'cypress';
 export default defineConfig({
   projectId: "nfahnr",
   e2e: {
-    baseUrl: 'http://localhost:4173',
+    baseUrl: 'http://127.0.0.1:4173',
     supportFile: false
   },
   viewportWidth: 1920,

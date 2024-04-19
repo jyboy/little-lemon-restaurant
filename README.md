@@ -20,7 +20,13 @@ Check out the live demo: [littlelemon-rest.netlify.app](https://littlelemon-rest
 - ✅ Semantic HTML and responsive design
 - ✅ Working routers and successful self-testing
 
-## Installation
+## Getting Started
+
+### Prerequisites
+
+Ensure you have `Node.js` and `pnpm` installed on your machine.
+
+### Installation
 
 1. Clone the repository:
 
@@ -37,21 +43,27 @@ cd little-lemon-restaurant
 3. Install dependencies:
 
 ```sh
-npm install # or pnpm install (recommended)
+pnpm install
 ```
 
 4. Start the development server:
 
 ```sh
-npm start # or npm run dev
+pnpm run dev
 ```
 
-## Additional Scripts
+### Additional Scripts
 
 - Lint JavaScript files:
 
 ```sh
 npm run lint
+```
+
+- Format the code:
+
+```sh
+npm run format
 ```
 
 - Run unit tests:

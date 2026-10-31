@@ -1,14 +1,12 @@
-import { useEffect } from 'react';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import { object, string, number, date } from 'yup';
 import Button from '../../components/Button/Button';
-import useSubmit from '../../hooks/useSubmit';
 import getToday from '../../utils/getToday';
+import submit from '../../utils/submit';
 
 const TableReservation = () => {
   const navigate = useNavigate();
-  const { isLoading, response, submit } = useSubmit();
 
   const schema = object({
     date: date().required(),
@@ -26,26 +24,19 @@ const TableReservation = () => {
       guests: 1,
       occasion: 'Birthday'
     },
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.table(values);
-      submit(location.href, values);
-    },
-    validationSchema: schema
-  });
-
-  useEffect(() => {
-    if (response) {
+      const response = await submit(location.href, values);
       if (response.type === 'success') {
         navigate('/reservation-success', {
           state: response.data
         });
-        formik.resetForm();
       } else {
         console.debug('error:', response.message);
       }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [response]);
+    },
+    validationSchema: schema
+  });
 
   return (
     <div className="flex flex-col items-center pb-20 pt-12">
@@ -137,7 +128,7 @@ const TableReservation = () => {
             id="submit"
             text="Reserve now"
             type="submit"
-            disabled={!formik.isValid || isLoading}
+            disabled={!formik.isValid || formik.isSubmitting}
           />
         </div>
       </form>

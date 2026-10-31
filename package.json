@@ -1,7 +1,7 @@
 {
   "name": "little-lemon-restaurant",
   "description": "The capstone project of Meta Front-End Developer",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@12.16.1",

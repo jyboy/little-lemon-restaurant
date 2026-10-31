@@ -60,12 +60,6 @@ pnpm run dev
 npm run lint
 ```
 
-- Format the code:
-
-```sh
-npm run format
-```
-
 - Run unit tests:
 
 ```sh

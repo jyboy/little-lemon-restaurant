@@ -26,6 +26,8 @@ Check out the live demo: [littlelemon-rest.netlify.app](https://littlelemon-rest
 
 Ensure you have `Node.js` and `pnpm` installed on your machine.
 
+Install [Gitleaks](https://github.com/gitleaks/gitleaks#installing) to scan for secrets before each commit.
+
 ### Installation
 
 1. Clone the repository:

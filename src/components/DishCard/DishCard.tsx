@@ -11,7 +11,7 @@ interface DishCardProps {
 
 const DishCard = ({ name, description, image, price }: DishCardProps) => {
   return (
-    <div className="h-116 w-72 overflow-hidden rounded-2xl bg-olive-light">
+    <article className="h-116 w-72 overflow-hidden rounded-2xl bg-olive-light">
       <img
         src={image}
         alt={name}
@@ -27,11 +27,12 @@ const DishCard = ({ name, description, image, price }: DishCardProps) => {
       <div className="mt-3 px-4">
         <Button
           text="Order a delivery"
+          aria-label={`Order a delivery: ${name}`}
           icon={<FontAwesomeIcon icon={faMotorcycle} />}
           onClick={() => {}}
         />
       </div>
-    </div>
+    </article>
   );
 };
 

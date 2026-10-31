@@ -38,8 +38,10 @@ const Footer = () => {
         <div className="h-48">
           <img src={logoWhiteImage} alt="Little Lemon logo" className="w-24" />
         </div>
-        <nav className="h-48">
-          <h3 className="text-xl uppercase text-white">Sitemap</h3>
+        <nav className="h-48" aria-labelledby="footer-sitemap">
+          <h2 id="footer-sitemap" className="text-xl uppercase text-white">
+            Sitemap
+          </h2>
           <ul className="mt-3 text-gray">
             {pageList.map(({ id, name, path }) => (
               <li key={id} className="hover:text-white">
@@ -49,7 +51,7 @@ const Footer = () => {
           </ul>
         </nav>
         <div className="h-48">
-          <h3 className="text-xl uppercase text-white">Contact us</h3>
+          <h2 className="text-xl uppercase text-white">Contact us</h2>
           <div className="mt-3 flex flex-col gap-y-2 text-gray">
             <address>
               <span className="inline-block w-7">
@@ -76,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="h-48">
-          <h3 className="text-xl uppercase text-white">Follow us</h3>
+          <h2 className="text-xl uppercase text-white">Follow us</h2>
           <ul className="mt-3 flex flex-col gap-y-2 text-gray">
             {socials.map(({ icon, name, url }) => (
               <li key={name} className="hover:text-white">
@@ -85,6 +87,7 @@ const Footer = () => {
                     <FontAwesomeIcon icon={icon} size="lg" />
                   </span>
                   <span>{name}</span>
+                  <span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </li>
             ))}

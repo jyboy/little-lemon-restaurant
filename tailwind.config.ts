@@ -11,7 +11,7 @@ export default {
       white: '#fff',
       gray: '#ddd',
       yellow: '#f4ce14',
-      orange: '#ee9972',
+      orange: '#b3421a',
       olive: {
         DEFAULT: '#495e57',
         light: '#edefee'

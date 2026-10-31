@@ -5,7 +5,7 @@ const UnderConstruction = () => {
     <div className="flex flex-col items-center pt-16">
       <img
         src={UnderConstructionImage}
-        alt="Under Construction illustration"
+        alt=""
         className="w-90"
       />
       <h1 className="mt-8 font-serif text-5.5xl text-olive">

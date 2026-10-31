@@ -6,6 +6,7 @@ describe('The Table Reservation page', () => {
   });
 
   it('enters valid information and clicks submit', () => {
+    cy.title().should('eq', 'Table Reservation | Little Lemon Restaurant');
     cy.get('#time').select('18:00');
     cy.get('#guests').clear().type('2');
     cy.get('#time').should('have.value', '18:00');
@@ -14,6 +15,7 @@ describe('The Table Reservation page', () => {
 
     cy.get('#submit').click();
     cy.url().should('include', '/reservation-success');
+    cy.title().should('eq', 'Reservation Confirmed | Little Lemon Restaurant');
     cy.get('[data-testid="success-message"]').should(
       'include.text',
       getToday() + ' at 18:00'

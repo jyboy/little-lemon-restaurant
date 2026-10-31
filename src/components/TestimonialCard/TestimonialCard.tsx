@@ -23,12 +23,15 @@ const TestimonialCard = ({
       <div className="flex h-10 justify-center">
         <h3 className="text-lg font-bold text-olive">{author}</h3>
       </div>
-      <div className="flex h-8 items-center px-4">
+      <div
+        className="flex h-8 items-center px-4"
+        role="img"
+        aria-label={`Rating: ${rating} out of 5`}
+      >
         {toStars(rating).map((star, index) => (
           <FontAwesomeIcon
             key={index}
             icon={star === 1 ? faStar : faStarHalfStroke}
-            title={star === 1 ? 'star' : 'half-filled star'}
             className="text-yellow"
             data-testid="star"
           />

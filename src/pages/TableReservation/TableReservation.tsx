@@ -53,11 +53,19 @@ const TableReservation = () => {
             type="date"
             name="date"
             id="date"
+            aria-required="true"
+            aria-invalid={Boolean(formik.errors.date)}
+            aria-describedby="date-error"
             value={formik.values.date}
             onChange={formik.handleChange}
             className="h-10 w-full rounded border border-olive-light pl-3 text-olive"
           />
-          <p className="leading-relaxed text-orange" data-testid="date-error">
+          <p
+            id="date-error"
+            className="leading-relaxed text-orange"
+            aria-live="polite"
+            data-testid="date-error"
+          >
             {formik.errors.date}
           </p>
         </div>
@@ -68,6 +76,9 @@ const TableReservation = () => {
           <select
             id="time"
             name="time"
+            aria-required="true"
+            aria-invalid={Boolean(formik.errors.time)}
+            aria-describedby="time-error"
             value={formik.values.time}
             onChange={formik.handleChange}
             className="h-10 w-full rounded border border-olive-light pl-3 text-olive"
@@ -79,7 +90,12 @@ const TableReservation = () => {
             <option>21:00</option>
             <option>22:00</option>
           </select>
-          <p className="leading-relaxed text-orange" data-testid="time-error">
+          <p
+            id="time-error"
+            className="leading-relaxed text-orange"
+            aria-live="polite"
+            data-testid="time-error"
+          >
             {formik.errors.time}
           </p>
         </div>
@@ -93,11 +109,19 @@ const TableReservation = () => {
             max="10"
             id="guests"
             name="guests"
+            aria-required="true"
+            aria-invalid={Boolean(formik.errors.guests)}
+            aria-describedby="guests-error"
             value={formik.values.guests}
             onChange={formik.handleChange}
             className="h-10 w-full rounded border border-olive-light pl-3 text-olive"
           />
-          <p className="leading-relaxed text-orange" data-testid="guests-error">
+          <p
+            id="guests-error"
+            className="leading-relaxed text-orange"
+            aria-live="polite"
+            data-testid="guests-error"
+          >
             {formik.errors.guests}
           </p>
         </div>
@@ -108,6 +132,9 @@ const TableReservation = () => {
           <select
             id="occasion"
             name="occasion"
+            aria-required="true"
+            aria-invalid={Boolean(formik.errors.occasion)}
+            aria-describedby="occasion-error"
             value={formik.values.occasion}
             onChange={formik.handleChange}
             className="h-10 w-full rounded border border-olive-light pl-3 text-olive"
@@ -117,7 +144,9 @@ const TableReservation = () => {
             <option>Other</option>
           </select>
           <p
+            id="occasion-error"
             className="leading-relaxed text-orange"
+            aria-live="polite"
             data-testid="occasion-error"
           >
             {formik.errors.occasion}

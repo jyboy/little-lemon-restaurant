@@ -5,10 +5,10 @@ const Story = () => {
     <section className="flex justify-center pb-20 pt-16">
       <div className="flex w-256 justify-between gap-x-12">
         <div>
-          <h2 className="font-serif text-5.5xl leading-tight text-yellow">
+          <h2 className="font-serif text-5.5xl leading-tight text-olive">
             Little Lemon
           </h2>
-          <h3 className="font-serif text-4.5xl">Chicago</h3>
+          <p className="font-serif text-4.5xl">Chicago</p>
           <article className="mt-4 text-justify">
             <p>
               The Little Lemon is a family-owned and operated restaurant that

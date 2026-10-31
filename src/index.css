@@ -5,6 +5,19 @@ html {
   @apply text-base;
 }
 
+@layer base {
+  :focus-visible {
+    outline: 3px solid #495e57;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #fff;
+  }
+
+  .bg-olive :focus-visible {
+    outline-color: #fff;
+    box-shadow: 0 0 0 2px #495e57;
+  }
+}
+
 body {
   margin: 0;
   min-width: 64rem;

@@ -2,7 +2,14 @@ import { faMotorcycle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '../Button/Button';
 
-const DishCard = ({ name, description, image, price }) => {
+interface DishCardProps {
+  name: string;
+  description: string;
+  image: string;
+  price: string;
+}
+
+const DishCard = ({ name, description, image, price }: DishCardProps) => {
   return (
     <div className="h-116 w-72 overflow-hidden rounded-2xl bg-olive-light">
       <img

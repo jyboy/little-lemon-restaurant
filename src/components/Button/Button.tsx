@@ -1,6 +1,13 @@
-const Button = (props) => {
+import type { ComponentProps, MouseEvent, ReactNode } from 'react';
+
+interface ButtonProps extends ComponentProps<'button'> {
+  text: string;
+  icon?: ReactNode;
+}
+
+const Button = (props: ButtonProps) => {
   const { text, icon, type = 'button', disabled = false, onClick } = props;
-  const handleClick = (e) => {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     if (type !== 'submit') e.preventDefault();
 
     if (onClick) onClick(e);

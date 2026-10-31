@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 const ReservationSuccess = () => {
   const location = useLocation();
+  const { date, time } = location.state as { date: string; time: string };
 
   return (
     <div>
@@ -13,7 +14,7 @@ const ReservationSuccess = () => {
           className="mt-8 font-serif text-4.5xl"
           data-testid="success-message"
         >
-          Your reservation for {location.state.date} at {location.state.time}{' '}
+          Your reservation for {date} at {time}{' '}
           has been confirmed.
         </h1>
       </div>

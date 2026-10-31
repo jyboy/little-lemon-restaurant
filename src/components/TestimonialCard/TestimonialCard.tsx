@@ -2,7 +2,19 @@ import { faStar, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import toStars from '../../utils/toStars';
 
-const TestimonialCard = ({ author, avatar, rating, text }) => {
+interface TestimonialCardProps {
+  author: string;
+  avatar: string;
+  rating: number;
+  text: string;
+}
+
+const TestimonialCard = ({
+  author,
+  avatar,
+  rating,
+  text
+}: TestimonialCardProps) => {
   return (
     <div className="h-96 w-60 rounded-2xl bg-olive-light">
       <div className="flex h-40 items-center justify-center">
@@ -16,7 +28,7 @@ const TestimonialCard = ({ author, avatar, rating, text }) => {
           <FontAwesomeIcon
             key={index}
             icon={star === 1 ? faStar : faStarHalfStroke}
-            alt={star === 1 ? 'star' : 'half-filled star'}
+            title={star === 1 ? 'star' : 'half-filled star'}
             className="text-yellow"
             data-testid="star"
           />

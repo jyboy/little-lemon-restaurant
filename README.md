@@ -5,7 +5,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/34939cfa-d864-4db0-b0cd-43944fa61457/deploy-status)](https://app.netlify.com/sites/littlelemon-rest/deploys)
 [![Project Background](https://img.shields.io/badge/Capstone_Project_-Meta_Frontend_Developer-2a73cc)](https://coursera.org/share/7fac44fbba3ed1449f894efc63c75116)
 
-A modern web application for table reservation at the Little Lemon restaurant, built with React and Tailwind CSS. This project is the capstone project for the Meta Front-End Developer Professional Certification program.
+A modern web application for table reservation at the Little Lemon restaurant, built with React, TypeScript, and Tailwind CSS. This project is the capstone project for the Meta Front-End Developer Professional Certification program.
 
 ## Demo
 
@@ -56,10 +56,17 @@ pnpm run dev
 
 ### Additional Scripts
 
-- Lint JavaScript files:
+- Lint and type-check the code:
 
 ```sh
-npm run lint
+pnpm run lint
+```
+
+- Run TypeScript checks directly for the application and Cypress tests:
+
+```sh
+pnpm exec tsc --noEmit
+pnpm exec tsc --noEmit -p cypress/tsconfig.json
 ```
 
 - Scan for security issues with [Fallow](https://fallow.tools/docs/cli/security/):
@@ -71,8 +78,27 @@ pnpm run security
 - Run unit tests:
 
 ```sh
-npm run test
+pnpm run test
 ```
+
+- Build the application and start the preview server:
+
+```sh
+pnpm run build
+pnpm run preview
+```
+
+The build command does not run type checks. Run the checks separately.
+
+- Run Cypress tests in a second terminal while the preview server is running at `http://localhost:4173`:
+
+```sh
+pnpm run test:ui
+```
+
+### TypeScript
+
+Use `.tsx` for React components and `.ts` for other TypeScript code. The root `tsconfig.json` enables strict checks for application code, unit tests, and build configuration files. `cypress/tsconfig.json` checks the Cypress tests with Cypress types.
 
 ## License
 

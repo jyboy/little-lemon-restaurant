@@ -178,6 +178,9 @@ importers:
       '@fortawesome/react-fontawesome':
         specifier: ^3.5.0
         version: 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.1)
+      '@tanstack/redact':
+        specifier: ^0.2.3
+        version: 0.2.3(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0))
       '@uiw/github-corners':
         specifier: ^1.5.16
         version: 1.5.16
@@ -885,6 +888,23 @@ packages:
 
   '@tailwindcss/postcss@4.3.3':
     resolution: {integrity: sha512-JTSZZGQi1AyKirbLN3azmjVzef92tcX7h+iSqPdaeStyFpGpDlKvvpxeOE8njhbUanbRwr3z8DyzhICWnMtQeg==}
+
+  '@tanstack/redact@0.2.3':
+    resolution: {integrity: sha512-a+KRpHdWPDfM9tOci9k8Oxm3YlEC8thBac8nxN5k7tzLWM6hagz+hZr0A0ZLjRcpHMOEHVxASx33WyUVvfpffw==}
+    peerDependencies:
+      '@cloudflare/vite-plugin': 1.65.0
+      next: ~15.5.0 || ~16.0.0 || ~16.1.0 || ~16.2.0 || ~16.3.0 || ~16.4.0
+      vinext: ~1.3.0
+      vite: '>=5'
+    peerDependenciesMeta:
+      '@cloudflare/vite-plugin':
+        optional: true
+      next:
+        optional: true
+      vinext:
+        optional: true
+      vite:
+        optional: true
 
   '@testing-library/dom@10.4.2':
     resolution: {integrity: sha512-yzr2S9HyAIdhz2/6qHgbs665Q7PKVcDF05vsOlHPxG1mo36gKVesdYVeDLnXgfjJ03CrKRk08knc6+E/9m8v2Q==}
@@ -3219,6 +3239,12 @@ snapshots:
       '@tailwindcss/oxide': 4.3.3
       postcss: 8.5.32
       tailwindcss: 4.3.3
+
+  '@tanstack/redact@0.2.3(vite@8.3.5(@types/node@26.6.6)(jiti@2.7.0))':
+    dependencies:
+      magic-string: 0.30.21
+    optionalDependencies:
+      vite: 8.3.5(@types/node@26.6.6)(jiti@2.7.0)
 
   '@testing-library/dom@10.4.2':
     dependencies:

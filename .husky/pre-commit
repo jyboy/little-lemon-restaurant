@@ -1,3 +1,4 @@
 pnpm run secrets
+pnpm run security
 pnpm run lint
 pnpm run test

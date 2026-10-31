@@ -62,6 +62,12 @@ pnpm run dev
 npm run lint
 ```
 
+- Scan for security issues with [Fallow](https://fallow.tools/docs/cli/security/):
+
+```sh
+pnpm run security
+```
+
 - Run unit tests:
 
 ```sh

@@ -28,10 +28,10 @@ const TestimonialCard = ({
         role="img"
         aria-label={`Rating: ${rating} out of 5`}
       >
-        {toStars(rating).map((star, index) => (
+        {toStars(rating).map((star) => (
           <FontAwesomeIcon
-            key={index}
-            icon={star === 1 ? faStar : faStarHalfStroke}
+            key={star.id}
+            icon={star.isHalf ? faStarHalfStroke : faStar}
             className="text-yellow"
             data-testid="star"
           />

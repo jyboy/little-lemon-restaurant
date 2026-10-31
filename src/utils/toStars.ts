@@ -1,10 +1,17 @@
+interface Star {
+  id: string;
+  isHalf: boolean;
+}
+
 // TODO: JSDoc
-const toStars = (rating: number) => {
+const toStars = (rating: number): Star[] => {
   const fullStars = Math.floor(rating);
-  const halfStar = rating % 1 !== 0 ? 0.5 : 0;
-  const stars = new Array<number>(fullStars).fill(1);
-  if (halfStar) {
-    stars.push(halfStar);
+  const stars: Star[] = Array.from({ length: fullStars }, (_, i) => ({
+    id: `full-${i}`,
+    isHalf: false
+  }));
+  if (rating % 1 !== 0) {
+    stars.push({ id: 'half', isHalf: true });
   }
   return stars;
 };
